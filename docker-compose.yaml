@@ -1,0 +1,9 @@
+services:
+  givtcp:
+    image: blasteh/givtcp_exporter:v0.7.1
+    environment:
+      - API_URL=http://homeassistance.local:6345/readData
+      - METRIC_PREFIX=givtcp
+    ports:
+      - 9132:9132
+    restart: always
